@@ -25,7 +25,7 @@ pipeline {
 		    steps {
 				script {
 
-					sh "git@github.com:MonikaTrajkovska/Ansible.git"
+					sh "https://github.com/MonikaTrajkovska/Ansible.git"
 				}
 			}
 		}
