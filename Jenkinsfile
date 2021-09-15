@@ -54,10 +54,10 @@ pipeline {
             steps {
                 script {
                    if (env.BRANCH_NAME == 'develop') {
-						sh "ansible-playbook -i ${env.WORKSPACE}/Ansible/inventory -u moni ${env.WORKSPACE}/Ansible/tci_dev_deploy.yml"
+						sh "ansible-playbook -i ${env.WORKSPACE}/Ansible/inventory -u jenkins-server-key ${env.WORKSPACE}/Ansible/tci_dev_deploy.yml"
                    } 
 				   else if (env.BRANCH_NAME == 'test'){
-						sh "ansible-playbook -i ${env.WORKSPACE}/Ansible/inventory -u moni ${env.WORKSPACE}/Ansible/tci_uat_deploy.yml"
+						sh "ansible-playbook -i ${env.WORKSPACE}/Ansible/inventory -u jenkins-server-key ${env.WORKSPACE}/Ansible/tci_uat_deploy.yml"
                    }
 				   
                 }
